@@ -8,7 +8,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (## paredit cider))))
+ '(package-selected-packages (quote (all-the-icons neotree ## paredit cider))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -27,3 +27,5 @@
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
+;; Make Neotree a bit nicer looking?
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
