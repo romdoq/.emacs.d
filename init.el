@@ -1,26 +1,28 @@
 (package-initialize)
 
 (add-to-list 'package-archives
-	     '("melpa" . "http://melpa.org/packages/"))
+             '("melpa" . "http://melpa.org/packages/"))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (all-the-icons neotree ## paredit cider))))
+ '(backward-delete-char-untabify-method nil)
+ '(desktop-save-mode t)
+ '(global-linum-mode t)
+ '(global-whitespace-mode t)
+ '(package-selected-packages (quote (all-the-icons neotree ## paredit cider)))
+ '(projectile-mode t nil (projectile))
+ '(show-trailing-whitespace t)
+ '(tool-bar-mode nil)
+ '(whitespace-style (quote (face trailing tabs))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-;; Add line numbers on all files
-;; The v26+ mode is apparently more efficient
-(if (version<= "26.0.50" emacs-version)
-  (global-display-line-numbers-mode)
-  (global-linum-mode))
 
 ;; Fire off projectiles
 (projectile-mode +1)
