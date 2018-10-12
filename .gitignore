@@ -4,4 +4,4 @@ elpa/
 *.el~
 \#*#
 .#*
-.emacs.desktop
+.emacs.desktop*

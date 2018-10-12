@@ -12,6 +12,8 @@
  '(desktop-save-mode t)
  '(global-linum-mode t)
  '(global-whitespace-mode t)
+ '(neo-smart-open t)
+ '(neo-theme (quote icons))
  '(package-selected-packages (quote (all-the-icons neotree ## paredit cider)))
  '(projectile-mode t nil (projectile))
  '(show-trailing-whitespace t)
@@ -29,5 +31,3 @@
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
-;; Make Neotree a bit nicer looking?
-(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
